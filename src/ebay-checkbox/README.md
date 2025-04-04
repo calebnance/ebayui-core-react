@@ -54,6 +54,9 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 </EbayCheckbox>
 ```
 
+> [!NOTE]
+> It supports all the events supported by an input element (e.g. `onClick`). For this component, `className`/`style` are applied to the root tag, while all other HTML attributes are applied to the `input` tag.
+
 ## Attributes
 
 | Name | Type | Stateful | Description | Data |

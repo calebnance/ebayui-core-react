@@ -62,10 +62,10 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 | `disabled` | Boolean | No | |
 | `checked` | Boolean | No | indicates the checked value of the input element, required for a controlled component. |
 | `defaultChecked` | Boolean  | No | indicates the default checked input element value. Use when the component is not controlled. |
-| `onChange` | Function | - | Callback fired on change | ```(
-  event: ChangeEvent,
-  { value: string, checked: Boolean }
-)``` | |
+| `onChange` | Function | - | Callback fired on change | <pre><code>(event: ChangeEvent, {  
+  value: string,  
+  checked: Boolean  
+})</code></pre> | |
 | `onFocus` | Function | - | Callback fired when button is focused                                                                                                                                              | `(event: FocusEvent, { value: string, checked: Boolean })`    |                                                                                                                                                                                    |
 | `onKeyDown`      | Function | -        | Callback fired when key is pressed                                                                                                                                                 | `(event: KeyboardEvent, { value: string, checked: Boolean })` |                                                                                                                                                                                    |
 

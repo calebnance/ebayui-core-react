@@ -84,7 +84,7 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 
 | Name | Type | Default | Description |
 |----- |------|---------|-------------|
-| **size** | 'large' | 'regular' | String | `regular` | sets the checkbox icon size. For mweb this should be set to `large`. (Note: The dimensions of the radio will not change, but only the icon) |
+| **size** | 'large' \| 'regular' \| String | `regular` | sets the checkbox icon size. For mweb this should be set to `large`. (Note: The dimensions of the radio will not change, but only the icon) |
 | `disabled` | Boolean |
 | `checked` | Boolean | | indicates the checked value of the input element, required for a controlled component. |
 | `defaultChecked` | Boolean | | indicates the default checked input element value. Use when the component is not controlled. |

@@ -2,7 +2,7 @@
 
 ## Demo
 
-- [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-input-ebay-checkbox--default-checkbox-button)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-input-ebay-checkbox--default-checkbox-button)
 
 ## Install
 
@@ -39,6 +39,9 @@ import {
 
 Add the below icons to the `EbaySvg` component.
 
+> [!NOTE]
+> Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
+
 ```tsx
 <EbaySvg
     icons={[
@@ -52,12 +55,17 @@ Add the below icons to the `EbaySvg` component.
 />
 ```
 
-> [!NOTE]
-> Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
-
 ## Usage (all props)
 
 ```jsx harmony
+import {
+    EbayCheckbox,
+    type CheckboxChangeHandler,
+    type CheckboxFocusHandler,
+    type CheckboxKeyDownHandler
+} from '@ebay/ui-core-react/ebay-checkbox'
+import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
+
 <EbayCheckbox
     id="checkbox-1"
     checked={false}
@@ -67,7 +75,9 @@ Add the below icons to the `EbaySvg` component.
     onChange={() => null}
     onKeyDown={() => null}
     onFocus={() => null}
-/>
+>
+    <EbayLabel>Remember me!</EbayLabel>
+</EbayCheckbox>
 ```
 
 ---

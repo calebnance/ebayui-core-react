@@ -82,13 +82,13 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 
 ## Attributes
 
-| Name | Type | Description | Options | Data |
-|----- |------|-------------|---------|------|
-| `size` | String | Sets the checkbox icon size. For mweb this should be set to `large`. (Note: The dimensions of the radio will not change, but only the icon) | - `large`<br>- `regular` (default) |
+| Name | Type | Default | Description |
+|----- |------|---------|-------------|
+| $\color{RoyalBlue}{size}$`size` | `string | Sets the checkbox icon size. For mweb this should be set to `large`. (Note: The dimensions of the radio will not change, but only the icon) | - `large`\- `regular` (default) |
 | `disabled` | Boolean |
 | `checked` | Boolean | indicates the checked value of the input element, required for a controlled component. |
 | `defaultChecked` | Boolean | indicates the default checked input element value. Use when the component is not controlled. |
-| `onChange` | Function | Callback fired on change | | <pre><code>(event: ChangeEvent, <br>{ <br>value: string, <br>checked: Boolean <br>})</code></pre> |
+| `onChange` | Function | Callback fired on change | | <pre><code>(event: ChangeEvent, \{\ value: string, \checked: Boolean\})</code></pre> |
 | `onFocus` | Function | Callback fired when button is focused | | `(event: FocusEvent, { value: string, checked: Boolean })` |
 | `onKeyDown` | Function | Callback fired when key is pressed | | `(event: KeyboardEvent, { value: string, checked: Boolean })` |
 

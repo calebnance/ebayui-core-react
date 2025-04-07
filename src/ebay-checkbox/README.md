@@ -39,9 +39,6 @@ import {
 
 Add the below icons to the `EbaySvg` component.
 
-> [!NOTE]
-> Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
-
 ```tsx
 <EbaySvg
     icons={[
@@ -54,6 +51,9 @@ Add the below icons to the `EbaySvg` component.
     ]}
 />
 ```
+
+> [!NOTE]
+> Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
 
 ## Usage (all props)
 
@@ -80,48 +80,6 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 </EbayCheckbox>
 ```
 
----
-
-## Import following styles from Skin
-```jsx harmony
-import '@ebay/skin/checkbox'
-```
-
-## ...or using SCSS/CSS
-```jsx harmony
-import '@ebay/skin/checkbox.css'
-```
-
-### Import icons
-
-Add the below icons to the `EbaySvg` component.
-
-Note: Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
-
-```tsx
-<EbaySvg
-    icons={[
-        "checkboxChecked18",
-        "checkboxUnchecked18",
-
-        // If using large checkboxes
-        "checkboxChecked24",
-        "checkboxUnchecked24",
-    ]}
-/>
-```
-
-```jsx
-import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
-
-<EbayCheckbox id="checkbox-1">
-    <EbayLabel>Remember me!</EbayLabel>
-</EbayCheckbox>
-```
-
-> [!NOTE]
-> It supports all the events supported by an input element (e.g. `onClick`). For this component, `className`/`style` are applied to the root tag, while all other HTML attributes are applied to the `input` tag.
-
 ## Attributes
 
 | Name | Type | Stateful | Description | Data |
@@ -134,3 +92,5 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 | `onFocus` | Function | - | Callback fired when button is focused | `(event: FocusEvent, { value: string, checked: Boolean })` |
 | `onKeyDown` | Function | - | Callback fired when key is pressed | `(event: KeyboardEvent, { value: string, checked: Boolean })` |
 
+> [!NOTE]
+> It supports all the events supported by an input element (e.g. `onClick`). For this component, `className`/`style` are applied to the root tag, while all other HTML attributes are applied to the `input` tag.

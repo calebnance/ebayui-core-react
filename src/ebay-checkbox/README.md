@@ -12,7 +12,8 @@ yarn add @ebay/ui-core-react
 
 ## Usage (minimal)
 
-### Import JS
+**Import JS**
+
 ```jsx harmony
 import {
     EbayCheckbox,
@@ -20,20 +21,21 @@ import {
     type CheckboxFocusHandler,
     type CheckboxKeyDownHandler
 } from '@ebay/ui-core-react/ebay-checkbox'
-import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
-
-<EbayCheckbox id="checkbox-1">
-    <EbayLabel>Remember me!</EbayLabel>
-</EbayCheckbox>
 ```
 
-### Import Styles
+**JSX**
+
+```jsx harmony
+<EbayCheckbox id="checkbox-1" />
+```
+
+**Import Styles**
 
 | without extension | with extension |
 | ----------------- | -------------- |
 | <pre><code>import '@ebay/skin/checkbox'</code></pre> | <pre><code>import '@ebay/skin/checkbox.css'</code></pre> |
 
-## Import Icons
+**Import Icons**
 
 Add the below icons to the `EbaySvg` component.
 
@@ -52,6 +54,21 @@ Add the below icons to the `EbaySvg` component.
 
 > [!NOTE]
 > Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
+
+## Usage (all props)
+
+```jsx harmony
+<EbayCheckbox
+    id="checkbox-1"
+    checked={false}
+    defaultChecked={false}
+    disabled={false}
+    size="regular"
+    onChange={() => null}
+    onKeyDown={() => null}
+    onFocus={() => null}
+/>
+```
 
 ---
 

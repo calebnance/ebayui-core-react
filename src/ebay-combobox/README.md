@@ -77,21 +77,33 @@ import '@ebay/skin/icon-button';
 
 ## Event Handlers
 
-### onChange
+### `onChange`
 
-Same as the `onChange` event, which fires on blur.
+same as the `onChange` event, which fires on blur
 
 **Required**: No
+
 **Parameters**:
+
 ```tsx
 (
-    event, {
-        currentInputValue,
-        selectedOption: {
-            text,
-            value
-        }
-    }
+    event,
+    { currentInputValue, selectedOption: { text, value }}
+)
+```
+
+### onInputChange
+
+same as the `onInpuChanget` event, which fires with every keypress
+
+**Required**: No
+
+**Parameters**:
+
+```tsx
+(
+    event,
+    { currentInputValue, selectedOption: { text, value } }
 )
 ```
 

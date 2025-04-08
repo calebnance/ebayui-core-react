@@ -63,7 +63,7 @@ import { EbayChipsCombobox, EbayComboboxOption } from "@ebay/ui-core-react/ebay-
 
 <EbayChipsCombobox
     a11yDeleteButtonText="Remove item"
-    className="chips-12"
+    className="chips-22"
     defaultSelected={['Option 1']}
     disabled={false}
     error={false}
@@ -83,7 +83,7 @@ import { EbayChipsCombobox, EbayComboboxOption } from "@ebay/ui-core-react/ebay-
 | ---- | ---- | :------: | ----------- |
 | `a11yDeleteButtonText` | String | No | Accessibility text for the delete button |
 | `className` | String | No | Ability to add class to container span |
-| `defaultSelected` | Array | No | Array of strings, that are selected on load |
+| `defaultSelected` | Array | No | Array of strings, that are selected by default |
 | `disabled` | Boolean | No |
 | `error` | Boolean | No |
 | `fluid` | Boolean | No | if true, css `display` is set to `block` instead of `inline-block` |

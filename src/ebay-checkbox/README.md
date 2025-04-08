@@ -13,12 +13,7 @@ For install and global requirements, please see our [Getting Started](../../READ
 **Import JS**
 
 ```jsx harmony
-import {
-    EbayCheckbox,
-    type CheckboxChangeHandler,
-    type CheckboxFocusHandler,
-    type CheckboxKeyDownHandler
-} from '@ebay/ui-core-react/ebay-checkbox'
+import { EbayCheckbox } from '@ebay/ui-core-react/ebay-checkbox'
 ```
 
 **JSX**

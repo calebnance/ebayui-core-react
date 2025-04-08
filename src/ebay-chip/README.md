@@ -43,7 +43,7 @@ import "@ebay/skin/chip.css";
 ## Attributes
 
 | Name                   | Type     | Required | Description                                |
-| ---------------------- | -------- | -------- | ------------------------------------------ |
+| ---------------------- | -------- | :------: | ------------------------------------------ |
 | `a11yDeleteButtonText` | String   | No       | Accessibility text for the delete button   |
 | `onDelete`             | Function | Yes      | Triggered when the delete button is clicked|
 | `disabled`             | Boolean  | No       | Whether the chip is disabled               |

@@ -11,6 +11,7 @@ eBayUI React components
 * [eBay Skin](https://ebay.github.io/skin/) (v18+)
 
 ### eBayUI Components
+
 * [ ] `ebay-3d-viewer`
 * [x] [ebay-accordion](src/ebay-accordion)
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
@@ -91,22 +92,59 @@ eBayUI React components
 
 These react components are available as `@ebay/ui-core-react` package on [NPM](https://npmjs.org/@ebay/ui-core-react).
 
+
+### Install
+
 Use npm or yarn to add the package dependency to your project:
 
-```sh
-yarn add @ebay/ui-core-react @ebay/skin
-```
+| yarn    | npm      |
+| ------- | -------- |
+| <pre><code>yarn add @ebay/ui-core-react @ebay/skin</code></pre> | <pre><code>npm i @ebay/ui-core-react @ebay/skin</code></pre> |
+
+### Usage example
 
 ```jsx harmony
-import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
 import { EbayButton } from '@ebay/ui-core-react/ebay-button'
+import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
 
 <EbayTextbox placeholder="Enter text here" />
 <EbayButton>Submit</EbayButton>
 ```
 
+### Global JS and Style requirements
+
+> [!IMPORTANT]
+> In a higer level page or layout component, make sure to include global styles
+
+```jsx harmony
+// skin styles
+import '@ebay/skin/global';
+import '@ebay/skin/tokens';
+```
+
+> [!IMPORTANT]
+> In a higer level page or layout component, make sure to include the `<EbaySvg />` component
+
+**This includes all icons (kitchen sink), and is not optimal for bundle size**
+
+```jsx harmony
+<EbaySvg />
+```
+
+**This way, you only include what icons you need for each component, found in each component doc, but it also opens the door for potential icons not displaying if they aren't included here.**
+
+```jsx harmony
+<EbaySvg icons={[
+    // checkbox
+    'checkboxChecked18',
+    'checkboxUnchecked18'
+]} />
+```
+
 ### Notes
+
 If you render children components dynamically and don't want to get React `key` warnings then provide a `key`:
+
 ```jsx harmony
 <EbayParentComponent>
     {items.map((item, index) => <EbayChildComponent key={index}>{item}</EbayChildComponent>)}
@@ -118,6 +156,7 @@ If you render children components dynamically and don't want to get React `key` 
 HTML attributes can be used on any component, and they will be passed through to the most prominent tag of the component. The most prominent tag is usually the root or form control, but individual components will note if it varies for specific cases.
 
 Example of usage:
+
 ```jsx
 <EbayButton id="my-button" />
 ```

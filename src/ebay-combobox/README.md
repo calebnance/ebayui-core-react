@@ -32,17 +32,14 @@ import { EbayCombobox, EbayComboboxOption } from "@ebay/ui-core-react/ebay-combo
 import "@ebay/skin/combobox";
 ```
 
-### If tokens haven't been added to the project at a higher level, make sure to import
+> [!IMPORTANT]
+> If tokens haven't been added to the project at a higher level, make sure to import
 
 ```jsx harmony
 import "@ebay/skin/tokens";
 ```
 
-### Or import styles using SCSS/CSS
-
-```jsx harmony
-import "@ebay/skin/combobox.css";
-```
+## Usage (all props)
 
 ```jsx harmony
 import { EbayCombobox, EbayComboboxOption, EbayComboboxButton } from "@ebay/ui-core-react/ebay-combobox";
@@ -52,7 +49,19 @@ import "@ebay/skin/combobox";
 import '@ebay/skin/icon';
 import '@ebay/skin/icon-button';
 
-<EbayCombobox>
+<EbayCombobox
+    autocomplete="none"
+    borderless={false}
+    disabled={false}
+    expanded={false}
+    floatingLabel={false}
+    fluid={false}
+    onChange={(e, { currentInputValue, selectedOption: { text } }) => {
+        console.log('change', e, currentInputValue, text);
+    }}
+    onCollapse={() => console.log('collapse')}
+    onExpand={() => console.log('expanded')}
+>
     <EbayComboboxButton>
         <EbayIcon name="clear16" />
     </EbayComboboxButton>
@@ -88,11 +97,11 @@ same as the `onChange` event, which fires on blur
 ```tsx
 (
     event,
-    { currentInputValue, selectedOption: { text, value }}
+    { currentInputValue, selectedOption: { text }}
 )
 ```
 
-### onInputChange
+### `onInputChange`
 
 same as the `onInpuChanget` event, which fires with every keypress
 
@@ -103,16 +112,49 @@ same as the `onInpuChanget` event, which fires with every keypress
 ```tsx
 (
     event,
-    { currentInputValue, selectedOption: { text, value } }
+    { currentInputValue, selectedOption: { text } }
 )
 ```
 
----
+### `onSelect`
 
-| `onCollapse` | Function | No | Collapsed content |
-| `onExpand` | Function | No | Expanded content |
-| `onFloatingLabelInit` | Function | No | when floating label finishes initializing |
-| `onChange` | Function | No | same as the `onChange` event, which fires on blur | `event, { currentInputValue, selectedOption: { text, value } }` |
-| `onInputChange` | Function | No | same as the `onInpuChanget` event, which fires with every keypress | `event, { currentInputValue, selectedOption: { text, value } }` |
-| `onSelect` | Function | No | similar to a `<select>`, which fires when an option is clicked or selected | `event, { currentInputValue, selectedOption: { text, value } }` |
-| `onFocus` | Function | No | same as the `onFocus` event, which fires on focus | `event, { currentInputValue, selectedOption: { text, value } }` |
+similar to a `<select>`, which fires when an option is clicked or selected
+
+**Required**: No
+
+**Parameters**:
+
+```tsx
+(
+    event,
+    { currentInputValue, selectedOption: { text } }
+)
+```
+
+### `onFocus`
+
+same as the `onFocus` event, which fires on focus
+
+**Required**: No
+
+**Parameters**:
+
+```tsx
+(
+    event,
+    { currentInputValue, selectedOption: { text } }
+)
+```
+
+### `onCollapse`
+
+combobox has been closed
+
+### `onExpand`
+
+combobox has been opened
+
+### `onFloatingLabelInit`
+
+when floating label finishes initializing
+

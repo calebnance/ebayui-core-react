@@ -4,40 +4,53 @@
 
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/docs/building-blocks-ebay-chip--docs)
 
-## Usage
+## Install
 
-### Import JS
+For install and global requirements, please see our [Getting Started](../../README.md#getting-started) section.
+
+## Usage (minimal)
+
+**Import JS**
 
 ```jsx harmony
-import EbayChip from "@ebay/ui-core-react/ebay-chip";
+import { EbayChip } from "@ebay/ui-core-react/ebay-chip";
 ```
 
-### Import following styles from SKIN
+**JSX**
+
+```jsx harmony
+<EbayChip
+    a11yDeleteButtonText="Remove item"
+    onDelete={() => null}
+    disabled={false}
+>
+    Chip content
+</EbayChip>
+```
+
+**Import Styles**
 
 ```jsx harmony
 import "@ebay/skin/chip";
 ```
 
-### If tokens haven't been added to the project at a higher level, make sure to import
+> [!IMPORTANT]
+> If tokens haven't been added to the project at a higher level, make sure to import
 
 ```jsx harmony
 import "@ebay/skin/tokens";
 ```
 
-### Or import styles using SCSS/CSS
+**Import Icons**
 
-```jsx harmony
-import "@ebay/skin/chip.css";
-```
+Add the below icon to the `<EbaySvg />` component (added to the project at a higher level).
 
-```jsx harmony
-<EbayChip
-    a11yDeleteButtonText="Remove item"
-    onDelete={handleDelete}
-    disabled={false}
->
-    Chip Content
-</EbayChip>
+```tsx
+<EbaySvg
+    icons={[
+        "close12"
+    ]}
+/>
 ```
 
 ## Attributes

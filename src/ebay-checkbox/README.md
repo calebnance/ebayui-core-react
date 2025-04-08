@@ -6,7 +6,7 @@
 
 ## Install
 
-For install and global requirements, please see our [Getting Started](./README.md#getting-started) section.
+For install and global requirements, please see our [Getting Started](../../README.md#getting-started) section.
 
 ## Usage (minimal)
 
@@ -42,7 +42,7 @@ import "@ebay/skin/tokens";
 
 **Import Icons**
 
-Add the below icons to the `<EbaySvg />` component.
+Add the below icons to the `<EbaySvg />` component (added to the project at a higher level).
 
 ```tsx
 <EbaySvg

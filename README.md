@@ -131,14 +131,16 @@ import '@ebay/skin/tokens';
 <EbaySvg />
 ```
 
-**This way, you only include what icons you need for each component, found in each component doc, but it also opens the door for potential icons not displaying if they aren't included here.**
+**This way, you only include the icons you need (found in each component DOC readme), but it also opens the door for potential icons not displaying if they aren't included here.**
 
 ```jsx harmony
-<EbaySvg icons={[
-    // checkbox
-    'checkboxChecked18',
-    'checkboxUnchecked18'
-]} />
+<EbaySvg
+    icons={[
+        // checkbox
+        'checkboxChecked18',
+        'checkboxUnchecked18'
+    ]}
+/>
 ```
 
 ### Notes
